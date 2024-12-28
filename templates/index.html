@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/tabs.css">
+    <link rel="stylesheet" href="../static/input.css">
+    <script src="../static/tabs.js"></script>
+    <script src="../static/submit.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="header"><h1>Print your Receipt!</h1></div>
+    <h3><a href="https://python-escpos.readthedocs.io/en/latest/">How it works</a></h3>
+    <div id="tab">
+        <button class="btn" id="text-button" onclick="handle(event, 'text', '#00bfff')">Text</button>
+        <button class="btn" id="img-button" onclick="handle(event, 'img', '#ffa07a')">Image</button>
+        <button class="btn" id="qr-button" onclick="handle(event, 'qr', '#20b2aa')">Qr Code</button>
+    </div>
+
+    <div id="text" class="tab-content">
+        <textarea id='text-input' placeholder="Type any text..."></textarea><br>
+        <input type="submit" id="text-submit" onclick="send_data('text-input')">
+    </div>
+
+    <div id="img" class="tab-content">
+        <input type="file" accept="image/*" id='img-input' name='img' onchange="load_file(event)"><br>
+        <input type="submit" id="img-submit" onclick="send_data('img-input')">
+        <img id="img_disp">
+    </div>
+
+    <div id="qr" class="tab-content">
+        <textarea id='qr-input' placeholder="Input a URL or some text..."></textarea><br>
+        <input type="submit" id="qr-submit" onclick="send_data('qr-input')">
+    </div>
+</body>
+</html>

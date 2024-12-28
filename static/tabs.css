@@ -1,0 +1,47 @@
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    text-align: center;
+}
+
+#header {
+    display: inline-block;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 1px 15px;
+    background-color:lightcyan;
+}
+
+#tab {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border: 1px solid #ccc;
+    background-color: #f1f1f1;*/
+}
+
+#tab button {
+    background-color: #f1f1f1;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+#tab button:hover {
+    background-color: #ddd;
+}
+
+#tab button:focus {
+    background-color: #ccc;
+}
+
+.tab-content {
+    display: none;
+    padding: 6px 12px;
+    margin-top: 10px;
+    font-size: 20px;
+}
