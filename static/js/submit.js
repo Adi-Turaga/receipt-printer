@@ -35,4 +35,5 @@ function send_data(input_id) {
             document.getElementById('img_disp').src = '';
             break;
     }
+    elem.value = '';
 }

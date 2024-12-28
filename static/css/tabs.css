@@ -32,10 +32,6 @@ body {
 }
 
 #tab button:hover {
-    background-color: #ddd;
-}
-
-#tab button:focus {
     background-color: #ccc;
 }
 
